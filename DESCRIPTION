@@ -1,0 +1,12 @@
+Package: curios
+Type: Package
+Title: Small unrelated R functions gratuitously appropriated from more talented people
+Version: 0.1.0
+Author: John A. M. Clouse
+Maintainer: The package maintainer <johnaclouse@gmail.com>
+Description: A collection of useful helper functions in R
+    SplitWords: regular expression based tool to split and combine words.
+    AnimalNames: random names consisting of adjective animal combinations elegantly written by Joe Cheng.
+License: Apache License 2.0
+Encoding: UTF-8
+LazyData: true
