@@ -31,6 +31,39 @@
 #' ##    `mgsub` Function
 #' ## ======================
 #' 
-#' multigsub(c("it's", "I'm"), c("it is", "I am"), DATA$state)
-#' mgsub(c("it's", "I'm"), c("it is", "I am"), DATA$state)
-#' mgsub("[[:punct:]]", "PUNC", DATA$state, fixed = FALSE)
+#'df = data.frame(
+#'word = c("foo", "bar", "foobar",
+#'         "energy", "skippito"),
+#'stringsAsFactors = F)
+#'
+#'
+#'thesauraus = data.frame(
+#'  word = c("skippito", "foobar"),
+#'  replacement = c("Skipper Cat", "foo__bar"),
+#'  stringsAsFactors = F)
+#'
+#'df$word
+#'multigsub(thesauraus$word, thesauraus$replacement,df$word)
+#'
+#'
+multigsub <-
+  function (pattern, replacement, text.var, leadspace = FALSE, 
+            trailspace = FALSE, fixed = TRUE, trim = TRUE, order.pattern = fixed, 
+            ...) {
+    
+    if (leadspace | trailspace) replacement <- spaste(replacement, trailing = trailspace, leading = leadspace)
+    
+    if (fixed && order.pattern) {
+      ord <- rev(order(nchar(pattern)))
+      pattern <- pattern[ord]
+      if (length(replacement) != 1) replacement <- replacement[ord]
+    }
+    if (length(replacement) == 1) replacement <- rep(replacement, length(pattern))
+    
+    for (i in seq_along(pattern)){
+      text.var <- gsub(pattern[i], replacement[i], text.var, fixed = fixed, ...)
+    }
+    
+    if (trim) text.var <- gsub("\\s+", " ", gsub("^\\s+|\\s+$", "", text.var, perl=TRUE), perl=TRUE)
+    text.var
+  }
