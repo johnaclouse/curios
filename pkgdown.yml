@@ -1,0 +1,9 @@
+pandoc: 2.7.3
+pkgdown: 2.0.1
+pkgdown_sha: ~
+articles: {}
+last_built: 2021-12-24T00:35Z
+urls:
+  reference: https://johnaclouse.github.io/curios/reference
+  article: https://johnaclouse.github.io/curios/articles
+
