@@ -16,4 +16,5 @@ Imports:
     rvest,
     stringr,
     xml2
-URL: https://johnaclouse.github.io/curios/
+URL: https://github.com/johnaclouse/curios
+BugReports: https://github.com/johnaclouse/curios/issues
