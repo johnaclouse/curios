@@ -12,7 +12,7 @@ format_toc_entry <- function(x, html_file){
 #'
 #' @param html_file a html file
 #'
-#' @return a character vector of table of formatted table contents entries
+#' @return A character vector of table of formatted table contents entries
 #' @export
 create_toc_entries <- function(html_file){
   xml2::read_html(html_file) %>%

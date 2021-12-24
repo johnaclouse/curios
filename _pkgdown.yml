@@ -1,4 +1,38 @@
-url: https://johnaclouse.github.io/curios/
+title: Curios
+url: https://johnaclouse.github.io/curios
 template:
-  bootstrap: 5
+  params:
+    bootswatch: flatly
+reference:
+  - title: Flexdashboard functions
+    desc: ~
+    contents:
+      - '`create_toc_entries`'
+  - title: Internals
+    desc: ~
+    contents:
+      - '`format_toc_entry`'
+navbar:
+  # type: inverse
+  left:
+    - icon: fa-home
+      href: index.html
+  right:
+    - icon: fa-file-code-o
+      text: "functions"
+      href: reference/index.html
+    - text: "Vignettes"
+      icon: fas fa-book
+      menu:
+      -  text: None currently available
+         href: reference/index.html
+    - icon: fa-newspaper-o
+      text: "news"
+      href: news/index.html
+    - icon: fa-github fa-lg
+      text: "github"
+      href: https://github.com/johnaclouse/curios
 
+# pkgdown dependencies that are not declared in DESCRIPTION
+# extra_packages:
+# - tidyverse
