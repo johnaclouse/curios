@@ -1,0 +1,19 @@
+Package: curios
+Title: Curios Used in Support of Practical Data Science
+Version: 0.0.0.9000
+Authors@R: 
+    person("John", "Clouse", , "john@clouse.io", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-0369-2116"))
+Description: A compendium of functions and data to support hands-on data science particularly. This is not a formal R package, but rather a collection of tools.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports: 
+    dplyr,
+    magrittr,
+    purrr,
+    rvest,
+    stringr,
+    xml2
+URL: https://johnaclouse.github.io/curios/
