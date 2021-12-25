@@ -2,7 +2,7 @@ title: Curios
 url: https://johnaclouse.github.io/curios
 template:
   params:
-    bootswatch: flatly
+    bootswatch: spacelab
 reference:
   - title: Flexdashboard functions
     desc: ~

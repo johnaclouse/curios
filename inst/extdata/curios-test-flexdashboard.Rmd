@@ -1,0 +1,40 @@
+---
+title: "Curios Test Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: scroll
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### H3 Heading A {#H3HeadingA}
+
+```{r}
+plot(iris)
+```
+
+### H3 Heading B {#H3HeadingB}
+
+```{r}
+plot(faithful[,1:2])
+```
+
+### H3 Heading C {#H3HeadingC}
+
+```{r}
+plot(sunspots)
+```
+
+### H3 Heading D
+
+#### H4 Heading D1
+
+#### H4 Heading D2
+
+#### H4 Heading D3
