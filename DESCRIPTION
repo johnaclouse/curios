@@ -19,5 +19,6 @@ Imports:
 URL: https://github.com/johnaclouse/curios
 BugReports: https://github.com/johnaclouse/curios/issues
 Suggests: 
+    covr,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

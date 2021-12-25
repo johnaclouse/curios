@@ -10,7 +10,7 @@ create_toc_entries(html_file)
 \item{html_file}{a html file}
 }
 \value{
-a character vector of table of formatted table contents entries
+A character vector of table of formatted table contents entries
 }
 \description{
 Create table of contents entries from web page content

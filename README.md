@@ -4,7 +4,7 @@ A compendium of curios used in support of practical data science. From the Jim A
 <!-- badges: start -->
 
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)[![R-CMD-check](https://github.com/johnaclouse/curios/workflows/R-CMD-check/badge.svg)](https://github.com/johnaclouse/curios/actions)
-
+[![Codecov test coverage](https://codecov.io/gh/johnaclouse/curios/branch/main/graph/badge.svg)](https://app.codecov.io/gh/johnaclouse/curios?branch=main)
 <!-- badges: end -->
 
 ## Curios web site
