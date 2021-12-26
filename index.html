@@ -5,8 +5,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curios Used in Support of Practical Data Science • Curios</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/spacelab/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<title>Curios Used in Support of Practical Data Science • curios</title>
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -32,7 +32,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">Curios</a>
+        <a class="navbar-link" href="index.html">curios</a>
         <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.0.9000</span>
       </span>
     </div>
@@ -40,46 +40,20 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">
-    <span class="fa fa-home"></span>
-     
-  </a>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="reference/index.html">Function Reference</a>
+</li>
+<li>
+  <a href="news/index.html">News</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="reference/index.html">
-    <span class="fa fa-file-code-o"></span>
-     
-    functions
-  </a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa-book"></span>
-     
-    Vignettes
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="reference/index.html">None currently available</a>
-    </li>
-  </ul>
-</li>
-<li>
-  <a href="news/index.html">
-    <span class="fa fa-newspaper-o"></span>
-     
-    news
-  </a>
-</li>
-<li>
   <a href="https://github.com/johnaclouse/curios" class="external-link">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fa fa-github"></span>
      
-    github
   </a>
 </li>
       </ul>
@@ -103,16 +77,25 @@
 <div class="section level2">
 <h2 id="curios-web-site">Curios web site<a class="anchor" aria-label="anchor" href="#curios-web-site"></a>
 </h2>
-<p><a href="https://johnaclouse.github.io/curios/" class="uri">https://johnaclouse.github.io/curios/</a></p>
+<p><a href="https://johnaclouse.github.io/curios/" class="external-link uri">https://johnaclouse.github.io/curios/</a></p>
 </div>
 <div class="section level2">
 <h2 id="flexdashboard-support-functions">Flexdashboard support functions<a class="anchor" aria-label="anchor" href="#flexdashboard-support-functions"></a>
 </h2>
-<div class="section level3">
-<h3 id="create_toc_entries">create_toc_entries<a class="anchor" aria-label="anchor" href="#create_toc_entries"></a>
-</h3>
-<p>Load a given html document, parse for H3 html nodes and return them as a vector formatted for use as a table of contents. Motivated by separating different phases of data science pipeline into separate html documents and the need to create a master table of contents across subpages.</p>
+<p>Functions specifically written to enhance and extend the functionality and formatting of Rstudio flexdashboards.</p>
 </div>
+<div class="section level2">
+<h2 id="formatting-functions">Formatting functions<a class="anchor" aria-label="anchor" href="#formatting-functions"></a>
+</h2>
+<p>Minor functions to present cleaner output formatting</p>
+</div>
+<div class="section level2">
+<h2 id="support-for-testing">Support for testing<a class="anchor" aria-label="anchor" href="#support-for-testing"></a>
+</h2>
+<p>See files in <code>system.file("extdata", package = "curios")</code> in support of testing .</p>
+<ul>
+<li><code>curios-test-flexdashboard.html</code></li>
+</ul>
 </div>
 </div>
   </div>
