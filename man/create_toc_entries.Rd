@@ -13,5 +13,14 @@ create_toc_entries(html_file)
 A character vector of table of formatted table contents entries
 }
 \description{
-Create table of contents entries from web page content
+Given a html file, parse throught the file looking for h3 html nodes.
+Each node is formatted using format_toc_entry() and returned as a character vector.
+}
+\details{
+create_toc_entries expects a flexdashboard with H3 headers (### in rmarkdown).
+In addtion, the header should be followed by a tag identical to the heading
+but without white space e.g., {#HeaderasisWithoutSpaces}.
+}
+\examples{
+create_toc_entries(system.file("extdata", "curios-test-flexdashboard.html", package = "curios"))
 }

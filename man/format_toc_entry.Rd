@@ -17,3 +17,4 @@ a character value with the table of contents entry
 \description{
 Format individual table of contents line
 }
+\keyword{internal}
