@@ -2,5 +2,7 @@
 
 export("%>%")
 export(add_custom_style)
+export(alignx_n)
 export(create_toc_entries)
+export(roundx_n)
 importFrom(magrittr,"%>%")

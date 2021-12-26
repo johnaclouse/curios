@@ -13,15 +13,13 @@ https://johnaclouse.github.io/curios/
 
 ## Flexdashboard support functions
 
-### add_custom_style
+Functions specifically written to enhance and extend the functionality and formatting of Rstudio flexdashboards.
 
-Extend the default flexdashboard CSS.
+## Formatting functions
 
-### create_toc_entries
+Minor functions to present cleaner output formatting
 
-Load a given html document, parse for H3 html nodes and return them as a vector formatted for use as a table of contents. Motivated by separating different phases of data science pipeline into separate html documents and the need to create a master table of contents across subpages.
-
-## Testing
+## Support for testing
 
 See files in `system.file("extdata", package = "curios")` in support of  testing .
 
