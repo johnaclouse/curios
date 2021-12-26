@@ -14,6 +14,7 @@
 #' @export
 #'
 #' @examples
+#' library(curios)
 #' cat(alignx_n(c(0.12345, 1.123344, 100.12345)), sep = "\n")
 #'
 #' # Without \code{roundx_n}

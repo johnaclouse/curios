@@ -16,6 +16,7 @@ A numeric value rounded based on the magnitude of \code{x}
 Round value based on magnitude
 }
 \examples{
+library(curios)
 # Note: R will display right padded zero's below. This is a display manifestation only.
 roundx_n(c(0.1234, 1.1234, 100.123))
 # Verify rounding does not add right hand padding
