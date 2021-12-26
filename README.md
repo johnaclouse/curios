@@ -13,6 +13,10 @@ https://johnaclouse.github.io/curios/
 
 ## Flexdashboard support functions
 
+### add_custom_style
+
+Extend the default flexdashboard CSS.
+
 ### create_toc_entries
 
 Load a given html document, parse for H3 html nodes and return them as a vector formatted for use as a table of contents. Motivated by separating different phases of data science pipeline into separate html documents and the need to create a master table of contents across subpages.
@@ -22,6 +26,7 @@ Load a given html document, parse for H3 html nodes and return them as a vector 
 See files in `system.file("extdata", package = "curios")` in support of  testing .
 
 * `curios-test-flexdashboard.html`
+
 
 
 
