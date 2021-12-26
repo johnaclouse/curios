@@ -1,6 +1,8 @@
 #' Round value based on magnitude
 #'
-#' @param x A numeric value to be rounded. Values >= 100 are rounded to 1 decimal place. Values < 100 and >=1 are rounded to two decimal places. Values <1 are rounded to three decimal places.
+#' @param x A numeric value to be rounded. Values >= 100 are rounded to 1
+#'   decimal place. Values < 100 and >=1 are rounded to two decimal places.
+#'   Values <1 are rounded to three decimal places.
 #'
 #' @return A numeric value rounded based on the magnitude of `x`
 #' @export
