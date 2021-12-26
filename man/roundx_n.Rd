@@ -7,10 +7,19 @@
 roundx_n(x)
 }
 \arguments{
+<<<<<<< HEAD
 \item{x}{A numeric value to be rounded. Values >= 100 are rounded to 1 decimal place. Values < 100 and >=1 are rounded to two decimal places. Values <1 are rounded to three decimal places.}
 }
 \value{
 A numeric value rounded based on the magnitude of \code{x}
+=======
+\item{x}{A numeric value to be rounded. Values >= 100 are rounded to 1 decimal
+place. Values < 100 and >=1 are rounded to two decimal places. Values <1
+are rounded to three decimal places.}
+}
+\value{
+numeric value rounded based on magnitude of x
+>>>>>>> 8ca9bf8144257dfad3dc7e35524f0c7d5d22d6d3
 }
 \description{
 Round value based on magnitude
