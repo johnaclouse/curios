@@ -24,6 +24,8 @@ reference:
     contents:
       - '`alignx_n`'
       - '`roundx_n`'
+  - title: contents
+      - is_discrete
   - title: Internals
     contents:
       - '`format_toc_entry`'
