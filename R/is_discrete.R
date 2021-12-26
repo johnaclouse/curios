@@ -5,7 +5,7 @@
 #' of a cutoff value is purely subjective.
 #'
 #' @param x a vector of numeric values
-#' @param cutoff minimum number of uniqu
+#' @param cutoff maximum number of unique values in x before x is considered not discrete
 #'
 #' @return logical
 #' @export

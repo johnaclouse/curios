@@ -18,14 +18,15 @@ navbar:
 reference:
   - title: Flexdashboard functions
     contents:
-      - '`add_custom_style`'
-      - '`create_toc_entries`'
+      - add_custom_style
+      - create_toc_entries
   - title: Formatting functions
     contents:
-      - '`alignx_n`'
-      - '`roundx_n`'
-  - title: contents
+      - alignx_n
+      - roundx_n
+  - title: Tests
+    contents:
       - is_discrete
   - title: Internals
     contents:
-      - '`format_toc_entry`'
+      - format_toc_entry

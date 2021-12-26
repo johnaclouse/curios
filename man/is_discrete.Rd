@@ -9,7 +9,7 @@ is_discrete(x, cutoff = 100)
 \arguments{
 \item{x}{a vector of numeric values}
 
-\item{cutoff}{minimum number of uniqu}
+\item{cutoff}{maximum number of unique values in x before x is considered not discrete}
 }
 \value{
 logical
