@@ -9,6 +9,11 @@
 #' @keywords internal
 #'
 #' @return a character value with the table of contents entry
+#' @export
+#'
+#' @examples
+#' format_toc_entry(c("Header 1", "Header 2"))
+#' format_toc_entry("Header 1", "---->", "mypage.html")
 format_toc_entry <- function(entry,
                              prefix = "|    ",
                              html_file = ""){

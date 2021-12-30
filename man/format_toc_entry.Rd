@@ -21,4 +21,8 @@ a character value with the table of contents entry
 \description{
 Format individual table of contents line
 }
+\examples{
+format_toc_entry(c("Header 1", "Header 2"))
+format_toc_entry("Header 1", "---->", "mypage.html")
+}
 \keyword{internal}
