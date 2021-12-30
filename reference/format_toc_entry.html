@@ -47,7 +47,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Format individual table of contents line</h1>
-    <small class="dont-index">Source: <a href="https://github.com/johnaclouse/curios/blob/HEAD/R/create_toc_entries.R" class="external-link"><code>R/create_toc_entries.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/johnaclouse/curios/blob/HEAD/R/format_toc_entry.R" class="external-link"><code>R/format_toc_entry.R</code></a></small>
     <div class="hidden name"><code>format_toc_entry.Rd</code></div>
     </div>
 
@@ -56,15 +56,19 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">format_toc_entry</span><span class="op">(</span><span class="va">x</span>, <span class="va">html_file</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">format_toc_entry</span><span class="op">(</span><span class="va">entry</span>, prefix <span class="op">=</span> <span class="st">"|    "</span>, html_file <span class="op">=</span> <span class="st">""</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>x</dt>
-<dd><p>a HTML node</p></dd>
+    <dl><dt>entry</dt>
+<dd><p>a character string to be converted to a Table of Contents entry.</p></dd>
+<dt>prefix</dt>
+<dd><p>a character string to be added to the front of the entry string
+typically for indentation purposes.</p></dd>
 <dt>html_file</dt>
-<dd><p>URL for the page containing the node</p></dd>
+<dd><p>URL for the page containing the node. Defaults to <code>""</code>
+indicating current page.</p></dd>
 </dl></div>
     <div id="value">
     <h2>Value</h2>
