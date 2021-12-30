@@ -10,31 +10,31 @@ output:
 library(flexdashboard)
 ```
 
-Column {data-width=350}
+# First flexdashbaord page
+
+This is a column in the flexdashboard {data-width=350}
 -----------------------------------------------------------------------
 
-### H3 Heading A {#H3HeadingA}
+### 1st H3 header
 
-```{r}
+```{r Code chunkc named plot-iris}
 plot(iris)
 ```
 
-### H3 Heading B {#H3HeadingB}
+### 2nd H3 header
 
 ```{r}
 plot(faithful[,1:2])
 ```
 
-### H3 Heading C {#H3HeadingC}
+### 3rd H3 header
 
-```{r}
-plot(sunspots)
-```
+#### A H4 header
 
-### H3 Heading D
+#### B H4 header
 
-#### H4 Heading D1
+#### C H4 header
 
-#### H4 Heading D2
+# Second flexdashboard page
 
-#### H4 Heading D3
+### Final H3 header

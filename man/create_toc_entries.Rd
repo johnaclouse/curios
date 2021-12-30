@@ -4,12 +4,19 @@
 \alias{create_toc_entries}
 \title{Create table of contents entries from web page content}
 \usage{
-create_toc_entries(html_file, node_type = "h3")
+create_toc_entries(
+  html_file,
+  node_type = "h1, h3",
+  prefix_map = c(h1 = "", h3 = "|    ")
+)
 }
 \arguments{
 \item{html_file}{a html file}
 
 \item{node_type}{character string defaults to "h3"}
+
+\item{prefix_map}{a named character vector used to map node types to prefix
+strings for the table of contents entry}
 }
 \value{
 A character vector of table of formatted table contents entries
@@ -25,8 +32,16 @@ rmarkdown). In addtion, the header should be followed by a tag identical to
 the heading but without white space e.g., {#HeaderasisWithoutSpaces}.
 
 Use node_type = "h3" to find rmarkdown ### headers or node_type =
-"h1" to find rmarkdown page headers.
+"h1" to find rmarkdown page headers. node_type = "h2" refers to column or
+row oobjects in a flexdashboard.
 }
 \examples{
-create_toc_entries(system.file("extdata", "curios-test-flexdashboard.html", package = "curios"))
+create_toc_entries(system.file("extdata", "curios-test-flexdashboard.html",
+package = "curios"))
+
+create_toc_entries(system.file("extdata",
+"curios-test-flexdashboard.html", package = "curios"), node_type = "h3")
+
+create_toc_entries(system.file("extdata", "curios-test-flexdashboard.html",
+package = "curios"), prefix_map = c("h1" = "--", "h3" = "----"))
 }
