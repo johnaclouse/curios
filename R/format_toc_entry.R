@@ -1,5 +1,8 @@
 #' Format individual table of contents line
 #'
+#' The function is used for its side-effect of printing a table of contents
+#' entry.
+#'
 #' @param entry a character string to be converted to a Table of Contents entry.
 #' @param prefix a character string to be added to the front of the entry string
 #'   typically for indentation purposes.
@@ -8,7 +11,7 @@
 #'
 #' @keywords internal
 #'
-#' @return a character value with the table of contents entry
+#' @return NULL
 #' @export
 #'
 #' @examples
@@ -17,11 +20,8 @@
 format_toc_entry <- function(entry,
                              prefix = "|    ",
                              html_file = ""){
-
   transformed_entry <-
     stringr::str_replace_all(tolower(entry), " ", "-")
 
-  cat(prefix,
-      "[", entry, "](", html_file, "#", transformed_entry,")\n",
-      sep = "")
+  cat(glue::glue("{prefix}[{entry}]({html_file}#{transformed_entry})"), "\n")
 }

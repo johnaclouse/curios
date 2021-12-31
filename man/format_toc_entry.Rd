@@ -15,11 +15,9 @@ typically for indentation purposes.}
 \item{html_file}{URL for the page containing the node. Defaults to \code{""}
 indicating current page.}
 }
-\value{
-a character value with the table of contents entry
-}
 \description{
-Format individual table of contents line
+The function is used for its side-effect of printing a table of contents
+entry.
 }
 \examples{
 format_toc_entry(c("Header 1", "Header 2"))

@@ -7,7 +7,8 @@
 create_toc_entries(
   html_file,
   node_type = "h1, h3",
-  prefix_map = c(h1 = "", h3 = "|    ")
+  prefix_map = c(h1 = "", h3 = "|    "),
+  include_page_name = TRUE
 )
 }
 \arguments{
@@ -17,9 +18,9 @@ create_toc_entries(
 
 \item{prefix_map}{a named character vector used to map node types to prefix
 strings for the table of contents entry}
-}
-\value{
-A character vector of table of formatted table contents entries
+
+\item{include_page_name}{a logical if true, the table of contents begins with
+a link to the page as the first entry.}
 }
 \description{
 Given a html file, parse throught the file looking for h3 html nodes. Each
@@ -27,9 +28,11 @@ node is formatted using format_toc_entry() and returned as a character
 vector.
 }
 \details{
-create_toc_entries expects a flexdashboard with H3 headers (### in
-rmarkdown). In addtion, the header should be followed by a tag identical to
-the heading but without white space e.g., {#HeaderasisWithoutSpaces}.
+The function create_toc_entries expects a flexdashboard with H3 headers (###
+in rmarkdown). In addtion, the header should be followed by a tag identical
+to the heading but without white space e.g., {#HeaderasisWithoutSpaces}. The
+function is used for the side-effect of directly printing table of contents
+entries.
 
 Use node_type = "h3" to find rmarkdown ### headers or node_type =
 "h1" to find rmarkdown page headers. node_type = "h2" refers to column or
