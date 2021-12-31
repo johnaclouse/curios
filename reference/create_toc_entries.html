@@ -63,7 +63,8 @@ vector.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">create_toc_entries</span><span class="op">(</span>
   <span class="va">html_file</span>,
   node_type <span class="op">=</span> <span class="st">"h1, h3"</span>,
-  prefix_map <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>h1 <span class="op">=</span> <span class="st">""</span>, h3 <span class="op">=</span> <span class="st">"|    "</span><span class="op">)</span>
+  prefix_map <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>h1 <span class="op">=</span> <span class="st">""</span>, h3 <span class="op">=</span> <span class="st">"|    "</span><span class="op">)</span>,
+  include_page_name <span class="op">=</span> <span class="cn">TRUE</span>
 <span class="op">)</span></code></pre></div>
     </div>
 
@@ -76,16 +77,17 @@ vector.</p>
 <dt>prefix_map</dt>
 <dd><p>a named character vector used to map node types to prefix
 strings for the table of contents entry</p></dd>
+<dt>include_page_name</dt>
+<dd><p>a logical if true, the table of contents begins with
+a link to the page as the first entry.</p></dd>
 </dl></div>
-    <div id="value">
-    <h2>Value</h2>
-    <p>A character vector of table of formatted table contents entries</p>
-    </div>
     <div id="details">
     <h2>Details</h2>
-    <p>create_toc_entries expects a flexdashboard with H3 headers (### in
-rmarkdown). In addtion, the header should be followed by a tag identical to
-the heading but without white space e.g., #HeaderasisWithoutSpaces.</p>
+    <p>The function create_toc_entries expects a flexdashboard with H3 headers (###
+in rmarkdown). In addtion, the header should be followed by a tag identical
+to the heading but without white space e.g., #HeaderasisWithoutSpaces. The
+function is used for the side-effect of directly printing table of contents
+entries.</p>
 <p>Use node_type = "h3" to find rmarkdown ### headers or node_type =
 "h1" to find rmarkdown page headers. node_type = "h2" refers to column or
 row oobjects in a flexdashboard.</p>
@@ -95,28 +97,31 @@ row oobjects in a flexdashboard.</p>
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">create_toc_entries</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"curios-test-flexdashboard.html"</span>,</span>
 <span class="r-in">package <span class="op">=</span> <span class="st">"curios"</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [First flexdashbaord page](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#first-flexdashbaord-page)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |    [1st H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#1st-h3-header)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |    [2nd H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#2nd-h3-header)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |    [3rd H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#3rd-h3-header)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [Second flexdashboard page](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#second-flexdashboard-page)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |    [Final H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#final-h3-header)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [curios-test-flexdashboard](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#curios-test-flexdashboard) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [First flexdashbaord page](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#first-flexdashbaord-page) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |    [1st H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#1st-h3-header) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |    [2nd H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#2nd-h3-header) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |    [3rd H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#3rd-h3-header) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [Second flexdashboard page](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#second-flexdashboard-page) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |    [Final H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#final-h3-header) </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu">create_toc_entries</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>,</span>
 <span class="r-in"><span class="st">"curios-test-flexdashboard.html"</span>, package <span class="op">=</span> <span class="st">"curios"</span><span class="op">)</span>, node_type <span class="op">=</span> <span class="st">"h3"</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |    [1st H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#1st-h3-header)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |    [2nd H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#2nd-h3-header)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |    [3rd H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#3rd-h3-header)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |    [Final H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#final-h3-header)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [curios-test-flexdashboard](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#curios-test-flexdashboard) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |    [1st H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#1st-h3-header) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |    [2nd H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#2nd-h3-header) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |    [3rd H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#3rd-h3-header) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |    [Final H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#final-h3-header) </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu">create_toc_entries</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"curios-test-flexdashboard.html"</span>,</span>
 <span class="r-in">package <span class="op">=</span> <span class="st">"curios"</span><span class="op">)</span>, prefix_map <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"h1"</span> <span class="op">=</span> <span class="st">"--"</span>, <span class="st">"h3"</span> <span class="op">=</span> <span class="st">"----"</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> --[First flexdashbaord page](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#first-flexdashbaord-page)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ----[1st H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#1st-h3-header)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ----[2nd H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#2nd-h3-header)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ----[3rd H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#3rd-h3-header)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> --[Second flexdashboard page](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#second-flexdashboard-page)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ----[Final H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#final-h3-header)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> --[curios-test-flexdashboard](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#curios-test-flexdashboard) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> --[First flexdashbaord page](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#first-flexdashbaord-page) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ----[1st H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#1st-h3-header) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ----[2nd H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#2nd-h3-header) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ----[3rd H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#3rd-h3-header) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> --[Second flexdashboard page](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#second-flexdashboard-page) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ----[Final H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#final-h3-header) </span>
 </code></pre></div>
     </div>
   </div>
