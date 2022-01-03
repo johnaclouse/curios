@@ -63,7 +63,7 @@ vector.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">create_toc_entries</span><span class="op">(</span>
   <span class="va">html_file</span>,
   node_type <span class="op">=</span> <span class="st">"h1, h3"</span>,
-  prefix_map <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>h1 <span class="op">=</span> <span class="st">""</span>, h3 <span class="op">=</span> <span class="st">"|    "</span><span class="op">)</span>,
+  padding_map <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>h1 <span class="op">=</span> <span class="st">"0em"</span>, h3 <span class="op">=</span> <span class="st">"2em"</span><span class="op">)</span>,
   include_page_name <span class="op">=</span> <span class="cn">TRUE</span>
 <span class="op">)</span></code></pre></div>
     </div>
@@ -74,8 +74,8 @@ vector.</p>
 <dd><p>a html file</p></dd>
 <dt>node_type</dt>
 <dd><p>character string defaults to "h3"</p></dd>
-<dt>prefix_map</dt>
-<dd><p>a named character vector used to map node types to prefix
+<dt>padding_map</dt>
+<dd><p>a named character vector used to map node types to padding
 strings for the table of contents entry</p></dd>
 <dt>include_page_name</dt>
 <dd><p>a logical if true, the table of contents begins with
@@ -116,10 +116,6 @@ row oobjects in a flexdashboard.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;/span&gt;&lt;span  style="padding-left: 2em; text-indent: -2em;"&gt;[3rd H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#3rd-h3-header) &lt;BR&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;/span&gt;&lt;span  style="padding-left: 2em; text-indent: -2em;"&gt;[Final H3 header](/home/runner/work/_temp/Library/curios/extdata/curios-test-flexdashboard.html#final-h3-header) &lt;BR&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;/span&gt;&lt;BR&gt;</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">create_toc_entries</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"curios-test-flexdashboard.html"</span>,</span>
-<span class="r-in">package <span class="op">=</span> <span class="st">"curios"</span><span class="op">)</span>, prefix_map <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"h1"</span> <span class="op">=</span> <span class="st">"--"</span>, <span class="st">"h3"</span> <span class="op">=</span> <span class="st">"----"</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in create_toc_entries(system.file("extdata", "curios-test-flexdashboard.html",     package = "curios"), prefix_map = c(h1 = "--", h3 = "----")):</span> unused argument (prefix_map = c(h1 = "--", h3 = "----"))</span>
 </code></pre></div>
     </div>
   </div>
