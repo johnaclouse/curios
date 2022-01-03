@@ -6,6 +6,8 @@
 \alias{curios-package}
 \title{curios: Curios Used in Support of Practical Data Science}
 \description{
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
 A compendium of functions and data to support hands-on data science particularly. This is not a formal R package, but rather a collection of tools.
 }
 \seealso{
