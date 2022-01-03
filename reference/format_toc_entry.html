@@ -76,9 +76,11 @@ indicating current page.</p></dd>
     <div id="ref-examples">
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">format_toc_entry</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Header 1"</span>, <span class="st">"Header 2"</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> |    [Header 1](#header-1) |    [Header 2](#header-2) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;span  style="padding-left: 2em; text-indent: -2em;"&gt;[Header 1](#header-1) [Header 2](#header-2) &lt;BR&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;/span&gt;</span>
 <span class="r-in"><span class="fu">format_toc_entry</span><span class="op">(</span><span class="st">"Header 1"</span>, <span class="st">"----&gt;"</span>, <span class="st">"mypage.html"</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ----&gt;[Header 1](mypage.html#header-1) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;span  style="padding-left: ----&gt;; text-indent: -----&gt;;"&gt;[Header 1](mypage.html#header-1) &lt;BR&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;/span&gt;</span>
 </code></pre></div>
     </div>
   </div>
