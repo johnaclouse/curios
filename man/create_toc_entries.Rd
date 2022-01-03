@@ -7,7 +7,7 @@
 create_toc_entries(
   html_file,
   node_type = "h1, h3",
-  prefix_map = c(h1 = "", h3 = "|    "),
+  padding_map = c(h1 = "0em", h3 = "2em"),
   include_page_name = TRUE
 )
 }
@@ -16,7 +16,7 @@ create_toc_entries(
 
 \item{node_type}{character string defaults to "h3"}
 
-\item{prefix_map}{a named character vector used to map node types to prefix
+\item{padding_map}{a named character vector used to map node types to padding
 strings for the table of contents entry}
 
 \item{include_page_name}{a logical if true, the table of contents begins with
@@ -44,7 +44,4 @@ package = "curios"))
 
 create_toc_entries(system.file("extdata",
 "curios-test-flexdashboard.html", package = "curios"), node_type = "h3")
-
-create_toc_entries(system.file("extdata", "curios-test-flexdashboard.html",
-package = "curios"), prefix_map = c("h1" = "--", "h3" = "----"))
 }

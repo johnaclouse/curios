@@ -15,8 +15,8 @@ exception: two properties of the \code{img} tag are redefined to have
 \item{\dots}{Character. Path to additional \emph{css} file(s) to include.}
 }
 \value{
-The style content and \emph{css} file(s) returned silently as a character vector, and
-printed (using \code{cat()}).
+The style content and \emph{css} file(s) returned silently as a
+character vector, and printed (using \code{cat()}).
 }
 \description{
 Generate inline style components to modify the standard flexdashboard
@@ -24,6 +24,9 @@ Generate inline style components to modify the standard flexdashboard
 \code{st_css()} from \url{https://github.com/dcomtois/summarytools}
 }
 \details{
-The function may be called in an \emph{R markdown} document code chunk having options
-\code{echo=FALSE} and \code{results="asis"}.
+The style formatting is intended to be used with bootsrap's
+\code{readable} theme.
+
+The function may be called in an \emph{R markdown} document code
+chunk having options \code{echo=FALSE} and \code{results="asis"}.
 }

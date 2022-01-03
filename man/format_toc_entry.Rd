@@ -4,12 +4,12 @@
 \alias{format_toc_entry}
 \title{Format individual table of contents line}
 \usage{
-format_toc_entry(entry, prefix = "|    ", html_file = "")
+format_toc_entry(entry, padding = "2em", html_file = "")
 }
 \arguments{
 \item{entry}{a character string to be converted to a Table of Contents entry.}
 
-\item{prefix}{a character string to be added to the front of the entry string
+\item{padding}{a character string to be added to the front of the entry string
 typically for indentation purposes.}
 
 \item{html_file}{URL for the page containing the node. Defaults to \code{""}
