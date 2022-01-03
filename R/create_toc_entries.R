@@ -16,7 +16,7 @@
 #'
 #' @param html_file a html file
 #' @param node_type character string defaults to "h3"
-#' @param prefix_map a named character vector used to map node types to prefix
+#' @param padding_map a named character vector used to map node types to padding
 #'   strings for the table of contents entry
 #' @param include_page_name a logical if true, the table of contents begins with
 #'   a link to the page as the first entry.
@@ -30,20 +30,18 @@
 #'
 #' create_toc_entries(system.file("extdata",
 #' "curios-test-flexdashboard.html", package = "curios"), node_type = "h3")
-#'
-#' create_toc_entries(system.file("extdata", "curios-test-flexdashboard.html",
-#' package = "curios"), prefix_map = c("h1" = "--", "h3" = "----"))
 create_toc_entries <- function(html_file,
                                node_type = "h1, h3",
-                               prefix_map = c("h1" = "", "h3" = "|    "),
+                               padding_map = c("h1" = "0em", "h3" = "2em"),
                                include_page_name = TRUE
 ){
+  cat("<BR>\n")
   if (include_page_name == TRUE) {
     base_name <- fs::path_file(html_file) %>%
       stringr::str_sub(1, (stringr::str_length(.) - 5))
     format_toc_entry(
       entry = base_name,
-      prefix = dplyr::recode("h1",!!!prefix_map),
+      padding = dplyr::recode("h1",!!!padding_map),
       html_file = html_file
     )
   }
@@ -53,16 +51,17 @@ create_toc_entries <- function(html_file,
     rvest::html_elements(node_type)
 
   entries <- data.frame(value = rvest::html_text(elements),
-                        prefix = rvest::html_name(elements) )
+                        padding = rvest::html_name(elements) )
 
 
-  entries$prefix <- dplyr::recode(entries$prefix,!!!prefix_map)
+  entries$padding <- dplyr::recode(entries$padding,!!!padding_map)
   purrr::walk2(.x = entries$value,
-               .y = entries$prefix,
+               .y = entries$padding,
                .f = ~ format_toc_entry(
                  entry = .x,
-                 prefix = .y,
+                 padding = .y,
                  html_file = html_file
                )
   )
+  cat("<BR>\n")
 }

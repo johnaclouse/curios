@@ -4,17 +4,20 @@
 #' \emph{css}. Original functionality updated based on example from
 #' \code{st_css()} from \url{https://github.com/dcomtois/summarytools}
 #'
+#' @details The style formatting is intended to be used with bootsrap's
+#'   \code{readable} theme.
+#'
 #' @param main Logical. Include \emph{summarytools.css} file. \code{TRUE} by
 #'   default. This will affects only \strong{summarytools} objects, for one
 #'   exception: two properties of the \code{img} tag are redefined to have
 #'   \code{background-color: transparent} and \code{border: 0}.
 #' @param \dots Character. Path to additional \emph{css} file(s) to include.
 #'
-#' @return The style content and \emph{css} file(s) returned silently as a character vector, and
-#'   printed (using \code{cat()}).
+#' @return The style content and \emph{css} file(s) returned silently as a
+#'   character vector, and printed (using \code{cat()}).
 #'
-#' @details The function may be called in an \emph{R markdown} document code chunk having options
-#'   \code{echo=FALSE} and \code{results="asis"}.
+#' @details The function may be called in an \emph{R markdown} document code
+#'   chunk having options \code{echo=FALSE} and \code{results="asis"}.
 #'
 #' @export
 add_custom_style <- function(main = TRUE,
@@ -40,7 +43,8 @@ body {
 }
 
 .navbar-brand  {
- padding: 30px 0px 0px 10px; /* align flexdashboard title (aka brand) with logo */
+/* align flexdashboard title (aka brand) with logo */
+ padding: 15px 0px 0px 15px;
 }
 
 pre {
@@ -54,7 +58,7 @@ pre {
   font-size: 22px;
   font-weight: 700;
   padding: 7px 10px 4px;
-  margin-top: 50px; /* fixes realative link landing on page and hiding heading*/
+  margin-top: 25px; /* fixes realative link landing on page and hiding heading*/
 }
 
 .chart-wrapper, .nav-tabs-custom, .sbframe-commentary {
