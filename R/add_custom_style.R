@@ -28,138 +28,133 @@ add_custom_style <- function(main = TRUE,
   output <- append(output, "<style type=\"text/css\">\n")
 
   if (isTRUE(main)) {
-    output <- append(output, "/*
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
-color: #fbb034;
-background-color: #00467f;
-border-color: #002a4c;
-font-weight: 900;
-}
-*/
+    output <- append(output, "/* Overwrite flexdashboard readable theme */
+    body {
+    background: #ffffff;
+    }
 
-/* Overwrite flexdashboard readable theme */
-body {
-  background: #ffffff;
-}
+    .navbar-brand  {
+    /* align flexdashboard title (aka brand) with logo */
+    padding: 15px 0px 0px 15px;
+    }
 
-.navbar-brand  {
-/* align flexdashboard title (aka brand) with logo */
- padding: 15px 0px 0px 15px;
-}
+    pre {
+    background-color:white; border:0; /* background for sidebar*/
+    }
 
-pre {
-  background-color:white; border:0; /* background for sidebar*/
-}
+    /* Adjust ### headers created in flexdashboard */
+    .chart-title {
+    /* border-bottom: 1px solid #d7d7d7; */
+    border-bottom: none;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 7px 0px 0px 7px;
+    margin-top: 60px; /* fixes relative link landing on page and hiding heading*/
+    }
 
-.chart-title {
-/* border-bottom: 1px solid #d7d7d7; */
-  border-bottom: none;
-  color: #333333;
-  font-size: 22px;
-  font-weight: 700;
-  padding: 7px 10px 4px;
-  margin-top: 25px; /* fixes realative link landing on page and hiding heading*/
-}
+    /* Adjust #### headers created in flexdashboard */
+    h4 {
+    /* border-bottom: 1px solid #d7d7d7; */
+    border-bottom: none;
+    color: #505050;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 75px 0px 0px 7px;
+    margin-top: -10px; /* fixes relative link landing on page and hiding heading*/
+    }
 
-.chart-wrapper, .nav-tabs-custom, .sbframe-commentary {
-    background: #fff;
+
+    /* Adjust ##### headers created in flexdashboard */
+    h5 {
+    /* border-bottom: 1px solid #d7d7d7; */
+    border-bottom: none;
+    color: #808080;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 16px 0px 0px 14px;
+    }
+
+    p {
+    padding: 0px 0px 0px 20px;
+    }
+
+    a:link {
+    color: blue;
+    }
+
+    a:visited {
+    color: blue;
+    }
+
+    .table {
+    margin-left: 100px
+    }
+
+
+    .table>thead>tr>th {
+    border-color: black;
+    }
+
+
+    /* Remove borders within the table body */
+    .table>tbody>tr>td {
     border: none;
-    border-radius: 3px;
-    margin-bottom: 8px;
-    margin-right: 8px;
-}
-
-.heading-level1 {  /* chart_title  */
-/* color: #00467f; */
-color:red;
-font-size: 18px;
-font-weight: 500;
-}
-
-h3, .h3 {
-  color: #002a4c;
-  font-size: 24px;
-  font-weight: 650;
-  margin-top:24px;
-  margin-bottom:4px;
-}
-
-h4, .h4 {
-  color: #002a4c;
-  font-size: 18px;
-  font-weight: 550;
-  margin-top:24px;
-  margin-bottom:4px;
-}
-
-a:link {
-color: blue;
-}
-
-a:visited {
-color: blue;
-}
-
-.table>thead>tr>th {
-  border-color: black;
-}
+    }
 
 
-/** Remove borders within the table body **/
-.table>tbody>tr>td {
-  border: none;
-}
+    /* Add a top border to the table header row */
+    .table thead tr:first-child {
+    border-top: 2px solid black;
+    }
 
 
-/** Add a top border to the table header row **/
-.table thead tr:first-child {
-  border-top: 2px solid black;
-}
+    /* Add a bottom border to the table body
+    .table tbody tr:last-child {
+    border-bottom: 2px solid black;
+    }
+    */
+
+    /* Make the table header row a normal weight; not bold */
+    .table th{
+    font-weight: normal;
+    }
 
 
-/** Add a bottom border to the table body
-.table tbody tr:last-child {
-  border-bottom: 2px solid black;
-}
-**/
+    /* Make the caption italic and black */
+    .table caption{
+    font-style: italic;
+    color: black;
+    }
 
-/** Make the table header row a normal weight; not bold **/
-.table th{
-  font-weight: normal;
-}
+    .image-container {
+    background-position: center top !important;
+    }
 
+    .scroll_chunk {
+    max-height: 425px;
+    float: left;
+    overflow-y: auto;
+    }
 
-/** Make the caption italic and black **/
-.table caption{
-  font-style: italic;
-  color: black;
-}
-
-.image-container {
-  background-position: center top !important;
-}
-
-.scroll_chunk {
-  max-height: 425px;
-  float: left;
-  overflow-y: auto;
-}
-
-mark {
-  background-color: yellow;
-  color: black;
-}")
+    mark {
+    background-color: yellow;
+    color: black;
+    }")
   }
 
 
-dotArgs <- list(...)
-for (f in dotArgs) {
-  output <- append(output, readLines(f))
-}
+  dotArgs <- list(...)
+  for (f in dotArgs) {
+    output <- append(output, readLines(f))
+  }
 
-output <- append(output, "</style>\n")
+  output <- append(output, "</style>\n")
 
-output <- paste(output, sep = "\n")
-cat(output)
-return(invisible(output))
+  output <- paste(output, sep = "\n")
+  cat(output)
+  return(invisible(output))
 }
