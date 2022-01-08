@@ -8,7 +8,7 @@
 A character vector
 }
 \source{
-\url{http://www.diamondse.info/}
+\url{https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case}
 }
 \usage{
 minor_words

@@ -20,13 +20,22 @@ reference:
     contents:
       - add_custom_style
       - create_toc_entries
+      - format_toc_entry
   - title: Formatting functions
     contents:
       - alignx_n
+      - fix_case
       - roundx_n
+  - title: Geospatial
+    contents:
+      - get_geiod
   - title: Tests
     contents:
       - is_discrete
-  - title: Internals
+  - title: Development
     contents:
-      - format_toc_entry
+      - rename_all_code_chunks
+  - title: Data
+    contents:
+      - known_acronyms
+      - minor_words

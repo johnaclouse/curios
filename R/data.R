@@ -5,7 +5,7 @@
 #' The words in this set are not to be capitalized in title case.
 #'
 #' @format A character vector
-#' @source \url{http://www.diamondse.info/}
+#' @source \url{https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case}
 "minor_words"
 
 

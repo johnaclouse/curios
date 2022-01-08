@@ -15,6 +15,7 @@ Imports:
     fs,
     glue,
     magrittr,
+    namer,
     purrr,
     rvest,
     stats,
