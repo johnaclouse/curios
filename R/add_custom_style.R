@@ -54,6 +54,12 @@ add_custom_style <- function(main = TRUE,
     margin-top: 60px; /* fixes relative link landing on page and hiding heading*/
     }
 
+    /* Remove border around section level 3 content */
+    .chart-wrapper {
+    border-style: none;
+    }
+
+
     /* Adjust #### headers created in flexdashboard */
     h4 {
     /* border-bottom: 1px solid #d7d7d7; */

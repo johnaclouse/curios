@@ -1,3 +1,6 @@
+home:
+  strip_header: true
+
 template:
   params:
     bootswatch: flatly
@@ -26,9 +29,6 @@ reference:
       - alignx_n
       - fix_case
       - roundx_n
-  - title: Geospatial
-    contents:
-      - get_geiod
   - title: Tests
     contents:
       - is_discrete
@@ -39,3 +39,6 @@ reference:
     contents:
       - known_acronyms
       - minor_words
+  - title: Internal functions
+    contents:
+      - remove_code_chunk_names
