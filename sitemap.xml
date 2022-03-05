@@ -16,6 +16,9 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/news/index.html</loc>
+  </url>
+  <url>
     <loc>/reference/add_custom_style.html</loc>
   </url>
   <url>
@@ -28,6 +31,9 @@
     <loc>/reference/curios-package.html</loc>
   </url>
   <url>
+    <loc>/reference/fix_case.html</loc>
+  </url>
+  <url>
     <loc>/reference/format_toc_entry.html</loc>
   </url>
   <url>
@@ -37,9 +43,24 @@
     <loc>/reference/is_discrete.html</loc>
   </url>
   <url>
+    <loc>/reference/known_acronyms.html</loc>
+  </url>
+  <url>
+    <loc>/reference/minor_words.html</loc>
+  </url>
+  <url>
     <loc>/reference/pipe.html</loc>
   </url>
   <url>
+    <loc>/reference/remove_code_chunk_names.html</loc>
+  </url>
+  <url>
+    <loc>/reference/rename_all_code_chunks.html</loc>
+  </url>
+  <url>
     <loc>/reference/roundx_n.html</loc>
+  </url>
+  <url>
+    <loc>/reference/sentance_case.html</loc>
   </url>
 </urlset>
