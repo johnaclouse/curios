@@ -28,6 +28,7 @@ reference:
     contents:
       - alignx_n
       - fix_case
+      - sentance_case
       - roundx_n
   - title: Tests
     contents:

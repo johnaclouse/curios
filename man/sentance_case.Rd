@@ -15,3 +15,6 @@ character
 \description{
 sentance_case
 }
+\examples{
+sentance_case("the CAT's name is Skipper")
+}
